@@ -318,10 +318,6 @@ open class SideMenuTransition: UIPercentDrivenInteractiveTransition {
         switch sideMenuManager.menuPresentMode {
 
         case .viewSlideOut, .viewSlideInOut:
-            mainView?.layer.shadowColor = sideMenuManager.menuShadowColor.cgColor
-            mainView?.layer.shadowRadius = sideMenuManager.menuShadowRadius
-            mainView?.layer.shadowOpacity = sideMenuManager.menuShadowOpacity
-            mainView?.layer.shadowOffset = CGSize(width: 0, height: 0)
             let direction:CGFloat = presentDirection == .left ? 1 : -1
             mainView?.frame.origin.x = direction * (menuView!.frame.width)
 
