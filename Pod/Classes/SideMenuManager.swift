@@ -208,6 +208,8 @@ open class SideMenuManager : NSObject {
             setupGesture(gesture: menuRightSwipeToDismissGesture)
         }
     }
+    
+    open weak var menuPresentFromViewControler: UIViewController?
 
     fileprivate func setupGesture(gesture: UIPanGestureRecognizer?) {
         guard let gesture = gesture else {

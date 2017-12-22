@@ -140,7 +140,7 @@ open class SideMenuTransition: UIPercentDrivenInteractiveTransition {
                 presentDirection = translation.x > 0 ? .left : .right
             }
 
-            if let menuViewController = menuViewController, let visibleViewController = SideMenuTransition.visibleViewController {
+            if let menuViewController = menuViewController, let visibleViewController = SideMenuManager.default.menuPresentFromViewControler {
                 interactive = true
                 visibleViewController.present(menuViewController, animated: true, completion: nil)
             } else {
